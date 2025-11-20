@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "413507324412",
+    "project_id": "wordle-8aca7",
+    "storage_bucket": "wordle-8aca7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:413507324412:android:eda1640ce5cf7ec20eca79",
+        "android_client_info": {
+          "package_name": "io.digitalsnacks.wordchallenge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "413507324412-r81sfv8oadfihvtokqk45tivfebtsnp0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.digitalsnacks.wordchallenge",
+            "certificate_hash": "3e09b6817ae4d70a13a3cc819370b42608c8ab5f"
+          }
+        },
+        {
+          "client_id": "413507324412-9ed2upvfnde8cve4jpn9i5kikivp8psj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDt0OOiuew-MyISyCO6n8mYVhlToaTKgik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "413507324412-9ed2upvfnde8cve4jpn9i5kikivp8psj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "413507324412-3lh9dr6he0i23kivangi6rsfrcjv4hho.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "io.digitalsnacks.wordchallenge"
+              }
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-6010103697197116~9177895177"
+    }
+  ],
+  "configuration_version": "1"
+}

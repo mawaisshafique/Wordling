@@ -1,0 +1,154 @@
+[ 
+    {
+        "id": 0,
+        "startDate": "2025-04-12T00:10:00Z",
+        "endDate": "2025-04-26T00:10:00Z",
+        "iconID": "Icon2",
+        "offers": 
+        [
+            {
+                "offerNo": 0,
+                "offerType": "Free",
+                "rewards": 
+                [
+                    {
+                        "itemType": "GEM", 
+                        "itemAmount": 100
+                    }
+                ]
+            },
+            {
+                "offerNo": 1,
+                "offerType": "RV",
+                "rewards": 
+                [
+                    {
+                        "itemType": "UNLIMITED_LIVES", 
+                        "itemID": "UnlimitedLives_30min"
+                    }
+                ]
+            },
+            {
+                "offerNo": 2,
+                "offerType": "IAP",
+                "purchaseID": "FREE_CAROUSEL_PRICE_1",
+                "rewards":
+                [
+                    {
+                        "itemType": "HINT_REVEAL_KEYBOARD",
+                        "itemAmount": "3"
+                    },
+                    {
+                        "itemType": "HINT_REVEAL_LETTER",
+                        "itemAmount": "3"
+                    },
+                    {
+                        "itemType": "HINT_REVEAL_KEYBOARD_CORRECT",
+                        "itemAmount": "3"
+                    }
+                ]
+            },
+            {
+                "offerNo": 3,
+                "offerType": "Free",
+                "rewards":
+                [
+                    {
+                        "itemType": "GEM",
+                        "itemID": "",
+                        "itemAmount": 100
+                    },
+                    {
+                        "itemType": "ENERGY",
+                        "itemID": "",
+                        "itemAmount": 5
+                    },
+                    {
+                        "itemType": "HINT_REVEAL_KEYBOARD",
+                        "itemID": "",
+                        "itemAmount": 5
+                    }
+                ]
+            },
+            {
+                "offerNo": 4,
+                "offerType": "RV",
+                "rewards":
+                [
+                    {
+                        "itemType": "UNLIMITED_LIVES",
+                        "itemID": "UnlimitedLives_30min",
+                        "itemAmount": 0
+                    }
+                ]
+            },
+            {
+                "offerNo": 5,
+                "offerType": "IAP",
+                "purchaseID": "FREE_CAROUSEL_PRICE_2",
+                "rewards":
+                [
+                    {
+                        "itemType": "HINT_REVEAL_KEYBOARD",
+                        "itemID": "",
+                        "itemAmount": 3
+                    },
+                    {
+                        "itemType": "HINT_REVEAL_LETTER",
+                        "itemID": "",
+                        "itemAmount": 3
+                    },
+                    {
+                        "itemType": "HINT_REVEAL_KEYBOARD_CORRECT",
+                        "itemID": "",
+                        "itemAmount": 3
+                    }
+                ]
+            },
+            {
+                "offerNo": 6,
+                "offerType": "Free",
+                "rewards":
+                [
+                    {
+                        "itemType": "GEM",
+                        "itemID": "",
+                        "itemAmount": 100
+                    }
+                ]
+            },
+            {
+                "offerNo": 7,
+                "offerType": "RV",
+                "rewards":
+                [
+                    {
+                        "itemType": "UNLIMITED_LIVES",
+                        "itemID": "UnlimitedLives_30min",
+                        "itemAmount": 0
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "startDate": "2025-04-29T00:10:00Z",
+        "endDate": "2025-04-30T00:10:00Z",
+        "iconID": "Icon2",
+        "offers":
+        [
+            {
+                "offerNo": 1,
+                "offerType": "Free",
+                "rewards":
+                [
+                    {
+                        "id": "GEM", 
+                        "amount": 20
+                    }
+                ]
+            }
+        ]
+    }
+]

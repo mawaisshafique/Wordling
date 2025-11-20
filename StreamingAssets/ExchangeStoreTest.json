@@ -1,0 +1,86 @@
+{
+    "refreshCost1": 12,
+    "refreshCost2": 12,
+    "refreshCost3": 12,
+    "refreshIntervalInSeconds": 12,
+    "itemPools": 
+    [
+        {
+            "ID": 0,
+            "items": 
+            [
+                {
+                    "itemType": "THEME",
+                    "itemID": "Ancient Pyramids",
+                    "costExchangeChips": 5
+                },
+                {
+                    "itemType": "PLAYER_AVATAR",
+                    "itemID": "22",
+                    "costExchangeChips": 5
+                },
+                {
+                    "itemType": "PLAYER_TITLE",
+                    "itemID": "12",
+                    "costExchangeChips": 11
+                },
+                {
+                    "itemType": "GEM",
+                    "itemAmount": 150,
+                    "purchaseLimit": 3,
+                    "costExchangeChips": 5
+                },
+                {
+                    "itemType": "ENERGY",
+                    "itemAmount": 3,
+                    "purchaseLimit": 3,
+                    "costExchangeChips": 5
+                },
+                {
+                    "itemType": "THEME_SHARD_TOKEN",
+                    "itemAmount": 5,
+                    "purchaseLimit": 3,
+                    "costExchangeChips": 5
+                }
+            ]
+        },
+        {
+            "ID": 1,
+            "items":
+            [
+                {
+                    "itemType": "THEME",
+                    "itemID": "Cozy Library",
+                    "costExchangeChips": 5
+                },
+                {
+                    "itemType": "PLAYER_AVATAR",
+                    "itemID": "20",
+                    "costExchangeChips": 5
+                },
+                {
+                    "itemType": "PLAYER_TITLE",
+                    "costExchangeChips": 11
+                },
+                {
+                    "itemType": "UNLIMITED_LIVES",
+                    "itemID": "UnlimitedLives_30min",
+                    "purchaseLimit": 3,
+                    "costExchangeChips": 5
+                },
+                {
+                    "itemType": "HINT_REVEAL_KEYBOARD",
+                    "itemAmount": 3,
+                    "purchaseLimit": 3,
+                    "costExchangeChips": 5
+                },
+                {
+                    "itemType": "HINT_REVEAL_LETTER",
+                    "itemAmount": 5,
+                    "purchaseLimit": 3,
+                    "costExchangeChips": 5
+                }
+            ]
+        }
+    ]
+}

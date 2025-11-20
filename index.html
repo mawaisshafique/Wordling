@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <!-- Template: MSStart + Unity Loading UI (OTP 1.2 style) -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Wordling!</title>
+
+    <!-- PWA manifest (real file, not a blob) -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Favicon + default Unity stylesheet (for loading bar / layout) -->
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+
+    <!-- MSStart (MSN) Games SDK -->
+    <script src="https://assets.msn.com/staticsb/statics/latest/msstart-games-sdk/msstart-v1.0.0-rc.20.min.js"></script>
+
+    <!-- Prevent scrollbars on the page itself -->
+    <style>
+        html, body { width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden; }
+    </style>
+</head>
+
+<body>
+<!-- Unity container + loading UI (from reference template) -->
+<div id="unity-container" class="unity-desktop" style="width: 100%; height: 100%; overflow-x: hidden; overflow-y: hidden;">
+    <canvas id="unity-canvas" style="width: 100%; height: 100%; cursor: default;"></canvas>
+
+    <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+            <div id="unity-progress-bar-full"></div>
+        </div>
+    </div>
+</div>
+
+<!-- Your lightweight MSStart ad helpers (must set window.gameInstance) -->
+<script src="msstart-ads.js"></script>
+
+<script>
+    /* ---------------------------- Viewport & gesture lock ---------------------------- */
+    // Match the reference: lock zooming / scaling and mark as handheld-friendly
+    document.head.insertAdjacentHTML('beforeend',
+        '<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">'
+    );
+    document.head.insertAdjacentHTML('beforeend',
+        '<meta name="HandheldFriendly" content="true" />'
+    );
+
+    ['gesturestart','gesturechange','gestureend'].forEach(function(evt){
+        document.addEventListener(evt, function(e){ e.preventDefault(); }, { passive:false });
+    });
+
+    /* ---------------------------- Elements & Build config ---------------------------- */
+    var container = document.getElementById('unity-container');
+    var canvas = document.getElementById('unity-canvas');
+    var loadingBar = document.getElementById('unity-loading-bar');
+    var progressBarFull = document.getElementById('unity-progress-bar-full');
+
+    var buildUrl = "Build";
+    var loaderUrl = buildUrl + "/cee3bfd5589651a8b16e2a12b8abe5b3.loader.js";
+
+    // Unity config (paths point into Build/)
+    var config = {
+        dataUrl:      buildUrl + "/6a380529efd114de4690879b4194f1b5.data.unityweb",
+        frameworkUrl: buildUrl + "/521ef6f944124cd559386166863601e6.framework.js.unityweb",
+        codeUrl:      buildUrl + "/b073fd96c1554e92326859445523c6bb.wasm.unityweb",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName:  "Digital Snacks",
+    productName:  "Wordling!",
+    productVersion: "1.0",
+    // If you want to force canvas size behavior, uncomment:
+    // matchWebGLToCanvasSize: false,
+    // devicePixelRatio: 1,
+    };
+
+    /* ---------------------------- Responsive behavior ---------------------------- */
+    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        // Extra mobile viewport for Unity guidance (like your minimal version)
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.head.appendChild(meta);
+
+        container.className = "unity-mobile";
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
+
+        // Keep full size on orientation changes
+        window.addEventListener("orientationchange", function () {
+            canvas.style.width = "100%";
+            canvas.style.height = "100%";
+        });
+
+        // Optional: match your earlier left-aligned body on mobile
+        document.body.style.textAlign = "left";
+    } else {
+        // Desktop: full-bleed canvas
+        canvas.style.width = "100%";
+        canvas.style.height = "100%";
+    }
+
+    /* ---------------------------- Background handling ---------------------------- */
+    // Fallback to the BACKGROUND_COLOR variable (from your minimal template)
+    // BACKGROUND_COLOR is already a valid CSS color string from Unity.
+    canvas.style.background = "#000000";
+
+    /* ---------------------------- Show loading bar, load loader ---------------------------- */
+    loadingBar.style.display = "block";
+
+    var script = document.createElement("script");
+    script.src = loaderUrl;
+    script.onload = function () {
+        // Use progress callback to drive the reference loading bar
+        createUnityInstance(canvas, config, function (progress) {
+            progressBarFull.style.width = (progress * 100) + "%";
+        }).then(function (instance) {
+            loadingBar.style.display = "none";
+
+            // Expose instance for msstart-ads.js (SendMessage, etc.)
+            window.gameInstance = instance;
+
+            // Preload Interstitial + Rewarded once Unity is ready (your original behavior)
+            if (window.MSStartAds && typeof MSStartAds.preload === 'function') {
+                MSStartAds.preload();
+            }
+        }).catch(function (message) {
+            // Keep alert for parity with reference, plus console
+            console.error(message);
+            alert(message);
+        });
+    };
+    document.body.appendChild(script);
+</script>
+</body>
+</html>

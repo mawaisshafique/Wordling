@@ -1,0 +1,25 @@
+{
+  "name": "Wordling!",
+  "short_name": "Wordling",
+  "start_url": ".",
+  "display": "fullscreen",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "id": "TapNationSAS.WordlingDailyWordChallenge",
+  "ms_start_compatible": true,
+  "publisher": "CN=418A2BB9-0F5C-4825-BA0A-74139936D4E0",
+  "store_id": "9NM0S2D6CPJT",
+  "dir": "auto",
+  "orientation": "any",
+  "version": "1.0.0",
+  "categories": [
+    "games"
+  ],
+  "launch_handler": {
+    "client_mode": "auto"
+  },
+  "icons": [
+    { "src": "icon-1920x1080.png", "sizes": "1920x1080", "type": "image/png" },
+    { "src": "icon-512x512.png",  "sizes": "512x512",  "type": "image/png" }
+  ]
+}

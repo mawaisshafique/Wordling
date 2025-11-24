@@ -1,6 +1,6 @@
 {
-  "name": "Wordling!",
-  "short_name": "Wordling",
+  "name": "Wordling Daily Word Challenge",
+  "short_name": "Wordling Daily Word Challenge",
   "start_url": ".",
   "display": "fullscreen",
   "background_color": "#000000",
